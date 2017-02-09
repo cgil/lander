@@ -2,7 +2,7 @@
 name: "Lander",
 description: "Landing page templater.",
 image: "heroku/python",
-repository: "",
+repository: "https://github.com/cgil/lander",
 keywords: [
 "python",
 "flask"
