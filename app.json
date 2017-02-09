@@ -1,0 +1,13 @@
+{
+name: "Lander",
+description: "Landing page templater.",
+image: "heroku/python",
+repository: "",
+keywords: [
+"python",
+"flask"
+],
+addons: [
+"heroku-postgresql"
+]
+}

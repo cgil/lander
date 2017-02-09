@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="HomePage">
+        <div
+            class="HomePage-banner u-dC-flexCenter"
+            style="background-image: url('{{ url_for('static', filename='img/banner-3.jpg') }}')"
+        >
+            <div class="HomePage-bannerContent text-center">
+                <h1 class="u-m-0 u-tC-white">
+                    Live life, baggage free. <br/>
+                </h1>
+                <h2 class="u-tC-white">
+                    Short-Term, Secure Backpack Storage Throughout Your City
+                </h2>
+                <div id="mc_embed_signup">
+                    <form
+                        action="//getcaddy.us13.list-manage.com/subscribe/post?u=7ac52370982b0636b0acd6901&amp;id=3d640d6ad8"
+                        id="mc-embedded-subscribe-form"
+                        method="post"
+                        name="mc-embedded-subscribe-form"
+                        novalidate
+                        target="_blank"
+                    >
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                                    <div class="input-group u-mT-xl">
+                                        <input
+                                            autofocus
+                                            class="form-control input-lg"
+                                            name="EMAIL"
+                                            id="mce-EMAIL"
+                                            placeholder="My Email"
+                                            type="email"
+                                        >
+                                        <span class="input-group-btn hidden-xs">
+                                            <button
+                                                class="btn btn-lg btn-success"
+                                                id="mc-embedded-subscribe"
+                                            >
+                                                Get Early Access
+                                            </button>
+                                        </span>
+                                        <span class="hide-above-xs">
+                                            <button
+                                                class="btn btn-lg btn-success HomePage-subscribeButton--mobile"
+                                                id="mc-embedded-subscribe"
+                                            >
+                                                Get Early Access
+                                            </button>
+                                        </span>
+                                    </div>
+                                    <div id="mce-responses" class="clear">
+                                        <div class="response" id="mce-error-response" style="display:none"></div>
+                                        <div class="response" id="mce-success-response" style="display:none"></div>
+                                    </div>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7ac52370982b0636b0acd6901_3d640d6ad8" tabindex="-1" value=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="HomePage-bannerBackdrop"></div>
+        </div>
+        <div class="text-center HomePage-section">
+            <h2 class="HomePage-sectionTitle u-tW-light u-mT-0 u-mB-xxl">How It Works</h2>
+            <div class="HomePage-howItWorks u-dC-flexCenter">
+                <div class="HomePage-howItWorksItem">
+                    <i class="fa fa-4x fa-shopping-bag u-mB-sm u-tC-brandMain"></i>
+                    <div class="u-tS-lg">
+                        Drop your bags off at the<br>
+                        nearest Caddy location.
+                    </div>
+                </div>
+                <div>
+                    <div class="hidden-xs u-mR-xxl">
+                        <i class="u-tC-gray fa fa-2x fa-long-arrow-right"></i>
+                    </div>
+                    <div class="hide-above-xs u-mB-md">
+                        <i class="u-tC-gray fa fa-2x fa-long-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="HomePage-howItWorksItem">
+                    <i class="fa fa-4x fa-group u-mB-sm u-tC-brandMain"></i>
+                    <div class="u-tS-lg">
+                        Live your life<br>
+                        without being weighed down!
+                    </div>
+                </div>
+                <div>
+                    <div class="hidden-xs u-mR-xxl">
+                        <i class="u-tC-gray fa fa-2x fa-long-arrow-right"></i>
+                    </div>
+                    <div class="hide-above-xs u-mB-md">
+                        <i class="u-tC-gray fa fa-2x fa-long-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="HomePage-howItWorksItem">
+                    <i class="fa fa-4x fa-truck u-mB-sm u-tC-brandMain"></i>
+                    <div class="u-tS-lg">
+                        When you're ready, pick-up or have<br/>
+                        your bags delivered to your door.
+                    </div>
+                </div>
+                <div>
+                    <div class="hidden-xs u-mR-xxl">
+                        <i class="u-tC-gray fa fa-2x fa-long-arrow-right"></i>
+                    </div>
+                    <div class="hide-above-xs u-mB-md">
+                        <i class="u-tC-gray fa fa-2x fa-long-arrow-down"></i>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa fa-4x fa-heart u-mB-sm u-tC-brandMain"></i>
+                    <div class="u-tS-lg">Rejoice!</div>
+                </div>
+            </div>
+        </div>
+        <div class="row u-bC-main">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section--reverse HomePage-section--withMap u-dC-flex">
+                <div
+                    class="HomePage-map"
+                    style="background-image: url('{{ url_for('static', filename='img/nyc_map_fun.png') }}')"
+                ></div>
+                <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-pB-xxl u-pT-xxl u-tC-white">
+                    <h2 class="HomePage-sectionTitle u-mT-0 u-tW-light">It's a Whole New New York</h2>
+                    <p class="HomePage-sectionCopy">
+                        Leave your baggage with us and explore the city like never before. <br/>
+                        Locations near your favorite spots added weekly!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
+                <div>
+                    <img
+                        class="HomePage-sectionImg"
+                        src={{ url_for('static', filename='img/locker-icon.png') }}
+                    >
+                </div>
+                <div class="HomePage-sectionContent">
+                    <h2 class="HomePage-sectionTitle u-tW-light">Daily Short-Term Storage</h2>
+                    <p class="HomePage-sectionCopy">
+                        Live your life freely. Drop your stuff off when you don’t need it at a nearby Caddy location. <br/>
+                        We’ll hold it safe and sound until you’re ready to have it delivered directly to your door.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row u-bC-main">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section HomePage-section--reverse u-dC-flex">
+                <div>
+                    <img
+                        class="HomePage-sectionImg"
+                        src={{ url_for('static', filename='img/exercise-icon.png') }}
+                    >
+                </div>
+                <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-tC-white">
+                    <h2 class="HomePage-sectionTitle u-tW-light">Exercise Just Got Easier</h2>
+                    <p class="HomePage-sectionCopy">
+                        Leave your exercise clothes where you need them!<br/>
+                        Have them on-location to use for your next workout.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
+                <div>
+                    <img
+                        class="HomePage-sectionImg"
+                        src={{ url_for('static', filename='img/drink-icon.png') }}
+                    >
+                </div>
+                <div class="HomePage-sectionContent">
+                    <h2 class="HomePage-sectionTitle u-tW-light">Happy Hour Calls</h2>
+                    <p class="HomePage-sectionCopy">
+                        Work is over! Drop your bags with Caddy and enjoy your night. Request to have your bags delivered directly to your door in the morning.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row u-bC-main">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section--reverse u-dC-flex">
+                <div>
+                    <img
+                        class="HomePage-sectionImg"
+                        src={{ url_for('static', filename='img/sleeping-icon.png') }}
+                    >
+                </div>
+                <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-tC-white">
+                    <h2 class="HomePage-sectionTitle u-tW-light">Sleepy-Time Storage</h2>
+                    <p class="HomePage-sectionCopy">
+                        Store your valuables overnight, we'll read them a bedtime story.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row HomePage-lastSection">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
+                <div>
+                    <img
+                        class="HomePage-sectionImg"
+                        src={{ url_for('static', filename='img/map-icon.png') }}
+                    >
+                </div>
+                <div class="HomePage-sectionContent">
+                    <h2 class="HomePage-sectionTitle u-tW-light">Convenience Like Never Before</h2>
+                    <p class="HomePage-sectionCopy">
+                        We partner with businesses all around you so you can use Caddy to
+                        <ul>
+                            <li>
+                                Relax at your favorite park
+                            </li>
+                            <li>
+                                Store equipment in between workouts
+                            </li>
+                            <li>
+                                Drop off shopping bags after finding that killer outfit
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="u-mT-xxl"
+            id="mc_embed_signup"
+        >
+            <form
+                action="//getcaddy.us13.list-manage.com/subscribe/post?u=7ac52370982b0636b0acd6901&amp;id=3d640d6ad8"
+                id="mc-embedded-subscribe-form"
+                method="post"
+                name="mc-embedded-subscribe-form"
+                novalidate
+                target="_blank"
+            >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                            <h1 class="text-center u-m-0">
+                                Join the private beta today!
+                            </h1>
+                            <div class="input-group u-mT-xl u-mB-xxl">
+                                <input
+                                    autofocus
+                                    class="form-control input-lg"
+                                    name="EMAIL"
+                                    id="mce-EMAIL"
+                                    placeholder="My Email"
+                                    type="email"
+                                >
+                                <span class="input-group-btn hidden-xs">
+                                    <button
+                                        class="btn btn-lg btn-success"
+                                        id="mc-embedded-subscribe"
+                                    >
+                                        Get Early Access
+                                    </button>
+                                </span>
+                                <span class="hide-above-xs">
+                                    <button
+                                        class="btn btn-lg btn-success HomePage-subscribeButton--mobile"
+                                        id="mc-embedded-subscribe"
+                                    >
+                                        Get Early Access
+                                    </button>
+                                </span>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7ac52370982b0636b0acd6901_3d640d6ad8" tabindex="-1" value=""></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
