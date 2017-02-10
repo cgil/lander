@@ -1,2 +1,72 @@
 ---
 debug: False
+
+pages:
+  home:
+    header:
+      title: Test Title
+      description: description
+      icon: locker-icon.png
+      url: https://url.com
+      product_name: product name
+    banner: banner.png
+    tagline: tagline
+    slogan: longer slogan
+    mailchimp:
+      bottom:
+        show: true
+      top:
+        show:  true
+      subscribe_url: mailchimp.com
+      email_placeholder: My Email
+      subscribe_button_text: Subscribe
+      mailchimp_cta_bottom: Subscribe Today!
+    sections:
+      how_it_works:
+        show: false
+        step_1:
+          description: desc
+          title: title
+          image: image.png
+        step_2:
+          description: desc
+          title: title
+          image: image.png
+        step_3:
+          description: desc
+          title: title
+          image: image.png
+        step_4:
+          description: desc
+          title: title
+          image: image.png
+      map:
+        show: false
+        description: desc
+        title: title
+        image: image.png
+      1:
+        show: true
+        description: desc
+        title: title
+        image: image.png
+      2:
+        show: true
+        description: desc
+        title: title
+        image: image.png
+      3:
+        show: true
+        description: desc
+        title: title
+        image: image.png
+      4:
+        show: true
+        description: desc
+        title: title
+        image: image.png
+      5:
+        show: true
+        description: desc
+        title: title
+        image: image.png
