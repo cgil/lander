@@ -1,6 +1,8 @@
-# caddy
-The next big thing
+# Lander
+Landing Page Templater.
 
+
+![alt tag](https://github.com/cgil/lander/blob/master/lander/static/img/template.png?raw=true)
 
 # Bootstrap
 ```
