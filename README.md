@@ -27,8 +27,8 @@ fab serve
 ```
 
 # Usage
-* Add a new page route to lander/__init__.py
-* Set a template for the route, defaults to home.html
+* Add a new page route to `lander/__init__.py`
+* Set a template for the route, the default is `home.html`
 * Edit development.yaml and production.yaml with appropriate variables to include your new page
 
 You may include mailchimp and google analytics options by manually updating the template.

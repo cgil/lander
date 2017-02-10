@@ -6,7 +6,7 @@ pages:
     header:
       title: Test Title
       description: description
-      icon: locker-icon.png
+      icon: icon.png
       url: https://url.com
       product_name: product name
     banner: banner.png
