@@ -1,11 +1,8 @@
 import os
 
-from flask import (
-    Flask,
-    render_template,
-    request,
-    send_from_directory,
-)
+from flask import Flask
+from flask import render_template
+from flask import send_from_directory
 
 os.environ['CONFIG_ENV'] = './config/%s.yaml' % os.environ['ENV_NAME']
 from utils.configuration import config
@@ -26,6 +23,10 @@ def create_app():
 
     @app.route('/')
     def home():
-        return render_template('home.html', is_production=not config.get('debug'))
+        return render_template(
+            'home.html',
+            is_production=not config.get('debug'),
+            **config.get('pages.home')
+        )
 
     return app
