@@ -11,6 +11,9 @@ $ cd lander
 $ virtualenv env
 $ source env/bin/activate
 
+# You may need postgres if not already installed. On mac:
+$ brew install postgresql
+
 $ pip install fabric  # If this is not already installed globally.
 # Bootstrap dependencies
 $ fab bootstrap

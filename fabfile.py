@@ -67,4 +67,5 @@ def bootstrap(env=DEFAULT_ENV):
 @task
 def serve(env=DEFAULT_ENV):
     """Start the server."""
+    os.environ['ENV_NAME'] = env
     local('python app.py')
