@@ -16,7 +16,7 @@
                 {% if mailchimp['top']['show'] %}
                     <div id="mc_embed_signup">
                         <form
-                            action={{ mailchimp['subscribe_url'] }}
+                            action="{{ mailchimp['subscribe_url'] }}"
                             id="mc-embedded-subscribe-form"
                             method="post"
                             name="mc-embedded-subscribe-form"
@@ -32,7 +32,7 @@
                                                 class="form-control input-lg"
                                                 name="EMAIL"
                                                 id="mce-EMAIL"
-                                                placeholder={{ mailchimp['email_placeholder'] }}
+                                                placeholder="{{ mailchimp['email_placeholder'] }}"
                                                 type="email"
                                             >
                                             <span class="input-group-btn hidden-xs">
@@ -68,11 +68,11 @@
             <div class="HomePage-bannerBackdrop"></div>
         </div>
         {% if sections['how_it_works']['show'] %}
-            <div class="text-center HomePage-section">
-                <h2 class="HomePage-sectionTitle u-tW-light u-mT-0 u-mB-xxl">How It Works</h2>
+          <div class="text-center HomePage-section HomePage-lastSection">
+                <h2 class="HomePage-sectionTitle u-tW-light u-mT-0 u-mB-xxl">{{ sections['how_it_works']['title'] }}</h2>
                 <div class="HomePage-howItWorks u-dC-flexCenter">
                     <div class="HomePage-howItWorksItem">
-                        <i class="fa fa-4x fa-shopping-bag u-mB-sm u-tC-brandMain"></i>
+                        <i class="fa fa-4x {{sections['how_it_works']['step_1']['icon']}} u-mB-sm u-tC-brandTertiary"></i>
                         <div class="u-tS-lg">
                             {{ sections['how_it_works']['step_1']['description'] }}
                         </div>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="HomePage-howItWorksItem">
-                        <i class="fa fa-4x fa-group u-mB-sm u-tC-brandMain"></i>
+                        <i class="fa fa-4x {{sections['how_it_works']['step_2']['icon']}} u-mB-sm u-tC-brandTertiary"></i>
                         <div class="u-tS-lg">
                             {{ sections['how_it_works']['step_2']['description'] }}
                         </div>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="HomePage-howItWorksItem">
-                        <i class="fa fa-4x fa-truck u-mB-sm u-tC-brandMain"></i>
+                        <i class="fa fa-4x {{sections['how_it_works']['step_3']['icon']}} u-mB-sm u-tC-brandTertiary"></i>
                         <div class="u-tS-lg">
                             {{ sections['how_it_works']['step_3']['description'] }}
                         </div>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <div>
-                        <i class="fa fa-4x fa-heart u-mB-sm u-tC-brandMain"></i>
+                        <i class="fa fa-4x {{sections['how_it_works']['step_4']['icon']}} u-mB-sm u-tC-brandTertiary"></i>
                         <div class="u-tS-lg">
                             {{ sections['how_it_works']['step_4']['description'] }}
                         </div>
@@ -122,112 +122,57 @@
                 </div>
             </div>
         {% endif %}
-        {% if sections['map']['show'] %}
-        <div class="row u-bC-main">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section--reverse HomePage-section--withMap u-dC-flex">
-                <div
-                    class="HomePage-map"
-                    style="background-image: url('{{ url_for('static', filename='img/' + sections['map']['image']) }}')"
-                ></div>
-                <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-pB-xxl u-pT-xxl u-tC-white">
-                    <h2 class="HomePage-sectionTitle u-mT-0 u-tW-light">{{ sections['map']['title'] }}</h2>
-                    <p class="HomePage-sectionCopy">
-                        {{ sections['map']['description'] }}
-                    </p>
-                </div>
-            </div>
-        </div>
+
+        <!-- Show a pricing and feature comparison table. -->
+        {% if sections['pricing']['show'] %}
+          {% include 'pricing.html' %}
         {% endif %}
-        {% if sections[1]['show'] %}
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
-                    <div>
-                        <img
-                            class="HomePage-sectionImg"
-                            src={{ url_for('static', filename='img/' + sections[1]['image']) }}
-                        >
-                    </div>
-                    <div class="HomePage-sectionContent">
-                        <h2 class="HomePage-sectionTitle u-tW-light">{{ sections[1]['title'] }}</h2>
-                        <p class="HomePage-sectionCopy">
-                            {{ sections[1]['description'] }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-        {% if sections[2]['show'] %}
-            <div class="row u-bC-main">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section HomePage-section--reverse u-dC-flex">
-                    <div>
-                        <img
-                            class="HomePage-sectionImg"
-                            src={{ url_for('static', filename='img/' + sections[2]['image']) }}
-                        >
-                    </div>
-                    <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-tC-white">
-                        <h2 class="HomePage-sectionTitle u-tW-light">{{ sections[2]['title'] }}</h2>
-                        <p class="HomePage-sectionCopy">
-                            {{ sections[2]['description'] }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-        {% if sections[3]['show'] %}
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
-                    <div>
-                        <img
-                            class="HomePage-sectionImg"
-                            src={{ url_for('static', filename='img/' + sections[3]['image']) }}
-                        >
-                    </div>
-                    <div class="HomePage-sectionContent">
-                        <h2 class="HomePage-sectionTitle u-tW-light">{{ sections[3]['title'] }}</h2>
-                        <p class="HomePage-sectionCopy">
-                            {{ sections[3]['description'] }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-        {% if sections[4]['show'] %}
-            <div class="row u-bC-main">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section--reverse u-dC-flex">
-                    <div>
-                        <img
-                            class="HomePage-sectionImg"
-                            src={{ url_for('static', filename='img/' + sections[4]['image']) }}
-                        >
-                    </div>
-                    <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-tC-white">
-                        <h2 class="HomePage-sectionTitle u-tW-light">{{ sections[4]['title'] }}</h2>
-                        <p class="HomePage-sectionCopy">
-                            {{ sections[4]['description'] }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-        {% if sections[5]['show'] %}
-            <div class="row HomePage-lastSection">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
-                    <div>
-                        <img
-                            class="HomePage-sectionImg"
-                            src={{ url_for('static', filename='img/' + sections[5]['image']) }}
-                        >
-                    </div>
-                    <div class="HomePage-sectionContent">
-                        <h2 class="HomePage-sectionTitle u-tW-light">{{ sections[5]['title'] }}</h2>
-                        <p class="HomePage-sectionCopy">
-                            {{ sections[5]['description'] }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
+
+        <!-- Show features sections. -->
+        {% set features_counter = [0] %}
+        {% for item in sections['features'] -%}
+          {% if item['show'] %}
+            {% if features_counter[0] % 2 == 0 %}
+              <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section u-dC-flex">
+                      <div>
+                          <img
+                              class="HomePage-sectionImg"
+                              src={{ url_for('static', filename='img/' + item['image']) }}
+                          >
+                      </div>
+                      <div class="HomePage-sectionContent">
+                          <h2 class="HomePage-sectionTitle u-tW-light">{{ item['title'] }}</h2>
+                          <p class="HomePage-sectionCopy">
+                              {{ item['description'] }}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+            {% else %}
+              <div class="row u-bC-main">
+                  <div class="col-xs-12 col-sm-8 col-sm-offset-2 HomePage-section HomePage-section HomePage-section--reverse u-dC-flex">
+                      <div>
+                          <img
+                              class="HomePage-sectionImg"
+                              src={{ url_for('static', filename='img/' + item['image']) }}
+                          >
+                      </div>
+                      <div class="HomePage-sectionContent HomePage-sectionContent--reverse u-tC-white">
+                          <h2 class="HomePage-sectionTitle u-tW-light">{{ item['title'] }}</h2>
+                          <p class="HomePage-sectionCopy">
+                              {{ item['description'] }}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+            {% endif %}
+            <!-- Hacky but working way to increment the counter, jinja2 has weird scoping and modification issues. -->
+            {% if features_counter.append(features_counter.pop() + 1) %}{% endif %}
+          {% endif %}
+        {%- endfor %}
+
+        <!-- Show mailchimp bottom signup. -->
         {% if mailchimp['bottom']['show'] %}
             <div
                 class="u-mT-xxl"

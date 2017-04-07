@@ -8,7 +8,9 @@ pages:
       description: description
       icon: icon.png
       url: https://url.com
-      product_name: product name
+    product_name: product name
+    contact_email: support@email.com
+    title: Title
     banner: banner.png
     tagline: tagline
     slogan: longer slogan
@@ -23,50 +25,64 @@ pages:
       mailchimp_cta_bottom: Subscribe Today!
     sections:
       how_it_works:
-        show: false
+        show: true
+        title: How it Works
         step_1:
-          description: desc
-          title: title
-          image: image.png
+          description: step 1
+          icon: fa-paint-brush
         step_2:
-          description: desc
-          title: title
-          image: image.png
+          description: step 2
+          icon: fa-building-o
         step_3:
-          description: desc
-          title: title
-          image: image.png
+          description: step 3
+          icon: fa-send
         step_4:
-          description: desc
+          description: step 4
+          icon: fa-shopping-bag
+      pricing:
+        show: true
+        title: Title
+        main_product:
+          title: My product
+        product_2:
+          title: Other product 2
+        product_3:
+          title: Other product 3
+        rows:
+          -
+            name: name 1
+            column_value_1: column 1
+            column_value_2: column 2
+            column_value_3: column 3
+          -
+            name: name 2
+            column_value_1: column 1
+            column_value_2: column 2
+            column_value_3: column 3
+          -
+            name: name 3
+            column_value_1: column 1
+            column_value_2: column 2
+            column_value_3: column 3
+        footnote:
+          show: true
+          content: "*footnote"
+      features:
+        -
+          show: true
           title: title
+          description: desc
           image: image.png
-      map:
-        show: false
-        description: desc
-        title: title
-        image: image.png
-      1:
-        show: true
-        description: desc
-        title: title
-        image: image.png
-      2:
-        show: true
-        description: desc
-        title: title
-        image: image.png
-      3:
-        show: true
-        description: desc
-        title: title
-        image: image.png
-      4:
-        show: true
-        description: desc
-        title: title
-        image: image.png
-      5:
-        show: true
-        description: desc
-        title: title
-        image: image.png
+          type: message
+        -
+          show: true
+          title: title
+          description: desc
+          image: image.png
+          type: message
+        -
+          show: true
+          title: title
+          description: desc
+          image: image.png
+          type: message

@@ -9,6 +9,8 @@ pages:
       icon: icon.png
       url: https://url.com
       product_name: product name
+      contact_email: support@email.com
+    title: Title
     banner: banner.png
     tagline: tagline
     slogan: longer slogan
@@ -26,19 +28,15 @@ pages:
         show: false
         step_1:
           description: desc
-          title: title
           image: image.png
         step_2:
           description: desc
-          title: title
           image: image.png
         step_3:
           description: desc
-          title: title
           image: image.png
         step_4:
           description: desc
-          title: title
           image: image.png
       map:
         show: false
@@ -47,26 +45,31 @@ pages:
         image: image.png
       1:
         show: true
-        description: desc
         title: title
+        description: desc
         image: image.png
+        type: message
       2:
         show: true
-        description: desc
         title: title
+        description: desc
         image: image.png
+        type: message
       3:
         show: true
-        description: desc
         title: title
+        description: desc
         image: image.png
+        type: message
       4:
         show: true
-        description: desc
         title: title
+        description: desc
         image: image.png
+        type: message
       5:
         show: true
-        description: desc
         title: title
+        description: desc
         image: image.png
+        type: message
