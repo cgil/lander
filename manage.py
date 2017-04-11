@@ -25,7 +25,9 @@ def list_routes():
 
         methods = ','.join(rule.methods)
         url = url_for(rule.endpoint, **options)
-        line = urllib.unquote('{:50s} {:20s} {}'.format(rule.endpoint, methods, url))
+        line = urllib.unquote('{:50s} {:20s} {}'.format(
+            rule.endpoint, methods, url)
+        )
         output.append(line)
 
     for line in sorted(output):
@@ -35,6 +37,7 @@ def list_routes():
 @manager.shell
 def make_shell_context():
     return dict(app=app, db=db)
+
 
 if __name__ == '__main__':
     manager.run()
