@@ -28,6 +28,7 @@ def shell(env=DEFAULT_ENV):
 def test(args='', env='test'):
     """Run tests."""
     os.environ['CONFIG_ENV'] = './config/%s.yaml' % env
+    os.environ['ENV_NAME'] = env
     clean()
     print green('Running all tests')
     cmd = ('nosetests -d --verbosity 3 --with-id --nocapture %s' % args)

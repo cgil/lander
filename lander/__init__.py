@@ -5,7 +5,7 @@ from flask import render_template
 from flask import send_from_directory
 
 os.environ['CONFIG_ENV'] = './config/%s.yaml' % os.environ['ENV_NAME']
-from utils.configuration import config
+from utils.configuration import config  # NOQA
 
 
 def create_app():
